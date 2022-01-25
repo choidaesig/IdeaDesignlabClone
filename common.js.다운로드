@@ -1,0 +1,47 @@
+
+var setCookie = function(name, value, day) {
+  var date = new Date();
+  date.setTime(date.getTime() + day * 60 * 60 * 24 * 1000);
+  document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+};
+var getCookie = function(name) {
+  var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+  return value? value[2] : null;
+};
+var deleteCookie = function(name) {
+  var date = new Date();
+  document.cookie = name + "= " + "; expires=" + date.toUTCString() + "; path=/";
+}
+
+// 팝업 생성 기능
+function make_popup(popups) {
+  for(i in popups){
+        var item = popups[i]
+    var popup_id = 'popup-'+item.id
+    if(!getCookie(popup_id)){
+      var popup = $(sprintf('<div id="%s" class="modal white main-popup" style="max-height:auto!important;" ><img src="%s" data-url="%s"/><div class="modal-footer white" style="text-align:center"><a class="btn btn-flat white black-text close-today" style="width:50%%" data-id="%s"><?php echo $this->lang->line("오늘안보기")?></a><a class="btn btn-flat modal-close white black-text" style="width:50%%"><?php echo $this->lang->line("닫기")?></a></div></div>', popup_id, item.image_url, 'item.url', popup_id))
+      popup.find('img').on('click', function(){
+        if(item.action == 'move_to_guide'){
+          location.href='/index.php/client/Home/move_to_guide'
+        }else if(item.action == 'move_to_notice'){
+          location.href='/index.php/client/Home/move_to_notice'
+        }
+      })
+      $('.modal-container').append(popup)
+    }
+  }
+  $('.modal').modal()
+  $('.modal').modal('open')
+  $('.modal').css('max-height', 'fit-content')
+}
+
+// 공백여부 검사기능
+function isEmpty(obj, label) {
+  if (obj.value == "") {
+    alert(label + "을(를) 입력해주세요");
+    obj.focus();
+    return false;
+  } else {
+    return true;
+  }
+}

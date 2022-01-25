@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://ideadesignlab.kr/index.php/summer -->
+<html lang="kr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>주식회사 아이들</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="./주식회사 아이들_files/materialize.min.css">
+    <link href="./주식회사 아이들_files/icon" rel="stylesheet">
+
+    <!-- 프론트페이지 SKIN CSS -->
+    <link rel="stylesheet" href="./주식회사 아이들_files/webnapp.css">
+
+    <!--인턴 황찬우 -->
+    <link rel="stylesheet" href="./주식회사 아이들_files/chanwoo.css">
+    <script type="text/javascript" src="./주식회사 아이들_files/jquery.min.js.다운로드"></script>
+
+    <!-- Jquery -->
+    <script src="./주식회사 아이들_files/jquery.3.min.js.다운로드"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="./주식회사 아이들_files/materialize.min.js.다운로드"></script>
+
+    <!-- 공통기능 JS 파일 -->
+    <script src="./주식회사 아이들_files/sprintf.js.다운로드"></script>
+
+    <script src="./주식회사 아이들_files/common.js.다운로드"></script>
+
+    <!-- 검증관련 기능 JS -->
+    <script src="./주식회사 아이들_files/validator.js.다운로드"></script>
+
+    <!-- 게시판관련 JS 파일 -->
+    <script src="./주식회사 아이들_files/board.js.다운로드"></script>
+
+    <script src="./주식회사 아이들_files/js" async=""></script>
+</head>
+
+<body style="overflow: hidden;" class="vsc-initialized">
+    <header>
+        <div>
+            <div>
+                <!-- <div style="height: 50px; background-color: red; margin-bottom: 10px;">
+    HEADER
+</div> -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div>
+
+
+
+            <div id="container">
+
+                <div id="main" class="main-page" style="background-color: rgb(240,210,190); width:100vw; background-repeat:no-repeat; background-size:cover; background-position:right">
+
+                    <div class="row">
+                        <div class="col menu-hamburger">
+                            <div class="menu" id="menu">
+                                <div class="nav-icon4" style="z-index:2">
+                                    <span id="span1"></span>
+                                    <span id="span2"></span>
+                                    <span id="span3"></span>
+                                </div>
+                            </div>
+
+                            <div class="menu-square iesquare" style="position: absolute; display: none;">
+                                <div style="width:fit-content">
+                                    <p class="menu-title" style="font-family: &#39;S-CoreDream-7ExtraBold&#39;;">주식회사 아이들.</p>
+                                    <p class="menu-first" style="font-family: &#39;S-CoreDream-6Bold&#39;; cursor:default;">홈.</p>
+                                    <p id="to_port" onclick="goPortfolio()" class="menu-second" style="font-family: &#39;S-CoreDream-4Regular&#39;; cursor:pointer;">포트폴리오 보고.</p>
+                                    <p id="contact" onclick="ContactClickFunction()" class="menu-second" style="font-family: &#39;S-CoreDream-4Regular&#39;; cursor:pointer;">연락주세요.</p>
+                                </div>
+                            </div>
+
+                            <div class="tap-target-wrapper" style="top: -339.078px; left: 66.2188px; position: fixed;">
+                                <div class="tap-target-wrapper" style="top: -338.297px; left: 64.6094px; position: fixed;">
+                                    <div id="menu-circle" style="z-index:1; width:0;" class="tap-target" data-target="menu">
+                                        <div class="tap-target-content" style="width: 40px; height: 400px; inset: 400px 0px 0px -40px; padding: 40px; vertical-align: top;">
+                                            <div class="menu-square" style="background-color:white; position:absolute;">
+                                                <div style="width:fit-content">
+                                                    <p class="menu-title" style="font-family: &#39;S-CoreDream-7ExtraBold&#39;;">주식회사 아이들.</p>
+                                                    <p class="menu-first" style="font-family: &#39;S-CoreDream-6Bold&#39;; cursor:default;">홈.</p>
+                                                    <p id="to_port" onclick="goPortfolio()" class="menu-second" style="font-family: &#39;S-CoreDream-4Regular&#39;; cursor:pointer;">포트폴리오 보고.</p>
+                                                    <p id="contact" onclick="ContactClickFunction()" class="menu-second" style="font-family: &#39;S-CoreDream-4Regular&#39;; cursor:pointer;">연락주세요.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tap-target-wave" style="top: 360px; left: -40px; width: 80px; height: 80px;">
+                                    <div class="menu tap-target-origin">
+                                        <div class="nav-icon4" style="z-index:2">
+                                            <span id="span1"></span>
+                                            <span id="span2"></span>
+                                            <span id="span3"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row valign-wrapper center-align" style="width: 100%; height:100%; position:relative">
+                        <div class="col l12 m12 s12 valign-wrapper">
+                            <img id="mainLogoImg" style="height: 60%; margin: 0px auto; display: inline-block;" src="./주식회사 아이들_files/idl-logo.png">
+
+                            <p class="hide-on-small-only" id="mainLogoP" style="filter: drop-shadow(rgb(105, 105, 105) 0px 4px 4px); margin: 0px auto; font-family: S-CoreDream-8Heavy; font-weight: 900; color: rgb(255, 65, 30); display: none;">
+                                <span style="color:rgb(40,50,65)">I</span>DEA
+                                <span style="color:rgb(40,50,65)">D</span>ESIGN
+                                <span style="color:rgb(40,50,65)">L</span>AB
+                            </p>
+
+                            <div class="left-align hide-on-med-and-up" id="mainLogoP2" style="overflow: hidden; position: absolute; width: 100%; margin: 0px auto; font-family: S-CoreDream-8Heavy; font-weight: 900; color: rgb(255, 65, 30); height: 265px;">
+                                <div style="position:relative; height:100%">
+                                    <p id="mainLogoP2_1" style="position: absolute; bottom: 170px; left: -5px;"><span style="color:rgb(40,50,65)">I</span>DEA</p>
+                                    <p id="mainLogoP2_2" style="position: absolute; bottom: 85px; right: 12px;" class="right-align"><span style="color:rgb(40,50,65)">D</span>ESIGN </p>
+                                    <p id="mainLogoP2_3" style="position: absolute; bottom: 0px; left: -5px;"><span style="color:rgb(40,50,65)">L</span>AB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="bottomWindow" class="row" style="position:relative; z-index:1; background-image:url(https://ideadesignlab.kr/application/data/file/chanwoo/background.png);
+ background-position:center; background-repeat:no-repeat; background-size:cover; background-position:center">
+
+                    <div id="scroll-left" class="col s12 Content" style="width:100%; height:100%; position: relative; overflow-x:scroll;">
+
+                        <div id="whole-content" class="row" style="min-width: 100vw; height: 100%; position: relative; width: 3396.76px;">
+
+                            <div class="col s12 m12 l12 first-portfolio" style="height:50%; position:relative">
+                                <div class="row" style="position:absolute;">
+
+                                    <div class="col title valign-wrapper main-title" style="width:7.1vh">
+                                        <p>웰컴, <br>
+                                            주식회사<br>
+                                            아이들.</p>
+                                    </div>
+
+
+
+                                    <div class="col l1 main-first-item">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/세레모뉴.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">WEB</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/세레모뉴_아이콘.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">세레모뉴</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text62" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font62" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 새로운 예식을 위한 전문 서비스</p>
+                                                    <p># 모바일 초대장, 감사장, 답례품 서비스</p>
+                                                    <p># 온택트 예식장 서비스 자체 개발</p>
+                                                    <p># 피로연 밀키트 배송 서비스</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+
+                                    <div id="l1-width" class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/타뷰배경.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/타뷰_LOGO_02.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">타뷰</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text47" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font47" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 유튜브 영상 및 채널 순위 제공 서비스</p>
+                                                    <p># 구글플레이 엔터테인먼트 부문 인기 급상승 최고 2위</p>
+                                                    <p># 구글플레이 종합 부문 인기 급상승 61위</p>
+                                                    <p># 일간 주간 월간 인기순 영상 순위 제공</p>
+                                                    <p># 카테고리별 인기 채널 순위 제공</p>
+                                                    <p># 영상 및 채널 보관 기능</p>
+                                                    <p># 채널 예상 수익 및 수익 계산기 기능 제공</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2016_골든디스크.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2016_골든디스크_APP_LOGO.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2016 골든디스크</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text55" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font55" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 글로벌 시상식 공식 서비스 운영 대행</p>
+                                                    <p># 월 100만 가입자</p>
+                                                    <p># 전세계 약 150개국 사용자</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2016_서울가요대상.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2016_서울가요대상_APP_LOGO.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2016 서울가요대상</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text57" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font57" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># K-POP 시상식 해외 공식 서비스 운영 </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2017_더서울어워드.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2017_THE_SEOUL_AWARDS.jpg&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2017 THE SEOUL AWARDS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text59" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font59" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 한류 전문 첫 회 시상식 공식 서비스</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/강원도_안심공제.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">WEB</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/강원도_안심공제1.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">강원도 안심공제</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text51" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font51" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 강원도 일자리 재단 서비스</p>
+                                                    <p># 강원형 일자리 안심 공제 관리 서비스</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2019_서울_스마트_모빌리티_엑스포.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">WEB</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2019_서울스마트모빌리티엑스포.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2019 서울 스마트 모빌리티 엑스포</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text52" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font52" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># SSME 공식 사이트</p>
+                                                    <p># 박람회 정보 및 참가 신청 서비스</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+                                    <a onclick="goPortfolio()" style="cursor:pointer">
+                                        <div class="center-align col valign-wrapper main-more" style="padding-bottom:5vh; background-color: rgba(255,255,255,0.8);">
+                                            <div class="row" style="font-family:S-CoreDream-8Heavy; padding-left:0; padding-top:3vh; height:100%; margin: 0 auto; text-align: left; line-height:105%;">
+                                                <p class="col" style="height:100%; text-align:left;">포<br>트<br>폴<br>리<br>오</p>
+                                                <div class="col" style="margin-left:0.5vh">
+                                                    <p style="text-align:left;">더</p>
+                                                    <p style="text-align:left; margin-top:1vh">보<br>러<br>가<br>기</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+
+                            <div id="second-window" class="col s12 m12 l12 second-portfolio" style="height:50%; position:relative">
+                                <div class="row" style="position:absolute; padding-left:0px">
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/남자의스타일_배경.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/남자의_스타일_LOGO.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">남자의 스타일</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text26" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font26" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 가상피팅룸 기반 남성 스마트 패션 매거진</p>
+                                                    >
+                                                    <p># 애플 라이프스타일 부문 1위</p>
+                                                    <p># 애플 훌륭한 무료/추천앱 선정</p>
+                                                    <p># 구글 플레이 '요즘 대세 앱' 선정</p>
+                                                    <p># 티스토어 추천앱 선정</p>
+                                                    <p># 대한민국 모바일 앱 어워드 수상</p>
+                                                    <p># 아시아 스마트폰 앱 컨테스트 한국 대표 추천작 선정</p>
+                                                    <p># 서비스 누적 60만 다운로드</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/논전_배경.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/정식로고_New.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">논전</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text27" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font27" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 게임 하듯 논쟁하는 커뮤니티 서비스</p>
+                                                    <p># 논쟁 커뮤니케이션의 전략 게임화</p>
+                                                    <p># 구글플레이 소셜 부문 인기 급상승 최고 1위</p>
+                                                    <p># 종합 인기 급상승 최고 109위</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2016_백상예술대상.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2016_백상예술대상_APP_LOGO.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2016 백상예술대상</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text56" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font56" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 글로벌 한류 시상식 공식 서비스</p>
+                                                    <p># 전세계 대상 서비스 운영</p>
+                                                    <p># 글로벌 사용자 90% 사용</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2017_AAA.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2017_AAA1.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2017 AAA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text58" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font58" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 아시아 아티스트 어워드 1회 공식 서비스</p>
+                                                    <p># K-POP, DRAMA 시상식</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2017_백상예술대상.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">APP</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/2017_백상예술대상_APP_LOGO.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">2017 백상예술대상</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text60" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font60" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 국내 최정상 아티스트 시상식 APP 서비스</p>
+                                                    <p># 파트너십 서비스 운영</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/강원도중국본부.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">WEB</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/강원도중국본부1.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">강원도 중국본부</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text50" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font50" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 강원도 중국 본부 공식 사이트</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/춘천시_세입세출3.png&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">WEB</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/춘천시_세입세출1.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">춘천시 세입세출</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text49" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font49" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 춘천시 세입 세출 정보 공개 사이트</p>
+                                                    <p># 정부 데이터 정보 연계 기술</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="col l1">
+                                        <div class="card">
+                                            <div class="card-image" style="position: relative; background-image:url(&#39;https://ideadesignlab.kr/application/data/file/lucas-favre--Lt5tKbCZoE-unsplash.jpg&#39;)">
+                                                <p class="card-category" style="position:absolute; top:2vh; right:2vh; color:white">WEB</p>
+                                            </div>
+
+                                            <div class="card-content">
+                                                <a class="btn-floating halfway-fab" style="background-image:url(&#39;https://ideadesignlab.kr/application/data/file/채널춘천.png&#39;)"></a>
+                                                <div class="valign-wrapper" style="height:6vh;">
+                                                    <p class="card-title">채널춘천</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a style="cursor:pointer" class="hover-wrapper">
+                                            <div class="hover-window" style="width:100%; height:100%; background-color:black; position:absolute; top:0; z-index:2;"></div>
+
+                                            <div class="valign-wrapper hover-text" id="hover-text61" style="width:100%; height:100%; position:absolute; top:0; z-index:2; transition:all .3s linear;">
+                                                <div class="hover-font" id="hover-font61" style="line-height: clamp(5px, 3.5vh, 22px); font-size: clamp(5px, 2.4vh, 14px);">
+                                                    <p># 춘천 공식 미디어 컨텐츠 서비스</p>
+                                                    <p># 지역 특산품 라이브 커머스 서비스</p>
+                                                    <p># 디자인 리뉴얼</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                            <div id="call-width" class="col valign-wrapper call-me" style="font-family: &#39;S-CoreDream-4Regular&#39;; height:100%; position:absolute; right:0px;">
+                                <div class="row" style="margin:0">
+                                    <div style="font-size:3vh; font-family: &#39;S-CoreDream-6Bold&#39;;">연락주시오 바로.</div>
+
+                                    <div class="call-me-first" style="position:relative; color:white; background-color: #283241;">
+                                        <p style="position:absolute; right:4vh; bottom:1.5vh;">idl201020@gmail.com</p>
+                                    </div>
+
+                                    <div class="call-me-second" style=" position:relative; min-height: 41px; color:white; background-color: #283241;">
+                                        <p style="line-height:110%; position:absolute; left:0; top:2vh; padding: 0 2vh;">
+                                            MEGA CITY building 619, chuncheon-ro,188, chuncheon, gangwon, KOREA.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var arrId = new Array(); //컨텐츠의 아이디들을 저장하는 배열
+
+                $('body').css('overflow', 'hidden');
+
+                $(document).ready(function() {
+                    $('.tap-target').tapTarget({
+                        "onClose": function() {
+                            $(".nav-icon4").removeClass('open');
+                        }
+                    });
+
+                    $('.nav-icon4').click(function() {
+                        $('.tap-target').tapTarget('open');
+                        $(this).toggleClass('open');
+                    });
+                });
+
+
+                document.addEventListener('DOMContentLoaded', function() {
+
+                    var elems = document.querySelectorAll('.dropdown-trigger');
+                    var instances = M.Dropdown.init(elems, {
+                        constrainWidth: false
+                    });
+
+                    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (navigator.userAgent.toLowerCase().indexOf("msie") != -1)) {
+                        ieMenuClick();
+                        changeFontSize();
+                        window.addEventListener('resize', function(event) {
+                            ieMenuClick();
+                            changeFontSize();
+                            width();
+                        });
+                    } else {
+                        $(".iesquare").css('display', 'none');
+                        var elems2 = document.querySelectorAll('.tap-target');
+                        var instances2 = M.TapTarget.init(elems2, {
+                            "onClose": function() {
+                                $(this).toggleClass('open')
+                            }
+                        });
+
+                        $(window).resize(function() { //화면 변화시 자동 새로고침(느리다? => 이미지의 크기가 너무 큼)
+                            $('.hover-font').css('line-height', 'clamp(5px, 3.5vh, 22px)');
+                            $('.hover-font').css('font-size', 'clamp(5px, 2.4vh, 14px)');
+                            changeFontSize();
+                            width();
+                        });
+                    }
+
+                    $("#to_port").on('click', ToPort);
+                    $("#contact-us").on('click', ContactClickFunction);
+                    changeFontSize(); // font영역(p)이 parent영역(div)를 초과할시 폰트 사이즈를 조정
+                    width(); // bottomWindow 너비 = 컨텐츠 너비 + 연락주시오 너비
+                    movePage(); // 
+                    changePToImg(); // main화면에 p와 img를 5,3초마다 fade in out해서 보여주는 애니메이션 
+                    calMonth(); //계절에 따라 배경 이미지 변경
+                    setMobileLogo(); // 모바일 화면에서의 changeToImg()
+                    checkIE(); // cross-browsing issue 로 인해 ie 일경우의 예외처리
+
+                    if ($(window).width() < 550) { //모바일 화면에서 연락주시오가 가운데로 오게함
+                        callWidthPadding();
+                    }
+
+
+                });
+
+                //ie 에서는 materialize featureDiscovery가 적용되지 않아 직접 만든 함수
+                function ieMenuClick() {
+
+                    $('.menu').click(function(event) {
+                        $('.nav-icon4').toggleClass('open');
+
+                        if ($(".iesquare").is(".open") == true) { //닫힐 때
+                            $('.menu-title').toggleClass('open');
+                            $('.menu-first').toggleClass('open');
+                            $('.menu-second').toggleClass('open');
+                            setTimeout(function() {
+                                $('.iesquare').toggleClass('open');
+                            }, 100);
+                        } else { //열릴 때
+                            $('.iesquare').toggleClass('open');
+                            setTimeout(function() {
+                                $('.menu-title').toggleClass('open');
+                                $('.menu-first').toggleClass('open');
+                                $('.menu-second').toggleClass('open');
+                            }, 500);
+                        }
+                    });
+
+                    $('#contact').click(function(event) {
+                        $('.iesquare').toggleClass('open');
+                        $('.menu-title').toggleClass('open');
+                        $('.menu-first').toggleClass('open');
+                        $('.menu-second').toggleClass('open');
+                    });
+                }
+
+                //모바일 화면에서 메인페이지 로고
+                function setMobileLogo() {
+                    var logoLineHeight = parseInt($('#mainLogoP2_1').css('line-height'), 10);
+                    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false; //기기가 pc면 false, mobile이면 true
+                    var userAgent = navigator.userAgent.toLowerCase();
+
+                    if (userAgent.indexOf('edge') > -1) {
+                        browser = 'edge';
+                    } else if (userAgent.indexOf('whale') > -1) {
+                        browser = 'whale';
+                    } else if (userAgent.indexOf('chrome') > -1) {
+                        if (userAgent.indexOf('samsungbrowser') > -1) {
+                            browser = 'samsung';
+                        } else {
+                            browser = 'chrome';
+                        }
+                    } else if (userAgent.indexOf('firefox') > -1) {
+                        browser = 'firefox';
+                    } else if (userAgent.indexOf('safari') > -1) {
+                        browser = 'safari';
+                    } else {
+                        browser = 'ie';
+                    }
+
+                    $('#mainLogoP2').css('height', logoLineHeight * 3 + 10 + 'px');
+
+                    $('#mainLogoP2_3').css('bottom', "0px");
+                    $('#mainLogoP2_3').css('left', "-5px");
+
+                    $('#mainLogoP2_2').css('bottom', logoLineHeight + 'px');
+                    if (isMobile == false && (browser == 'firefox' || browser == 'chrome')) {
+                        $('#mainLogoP2_2').css('right', "12px");
+                    } else {
+                        $('#mainLogoP2_2').css('right', "-5px");
+                    }
+
+                    $('#mainLogoP2_1').css('bottom', logoLineHeight * 2 + 'px');
+                    $('#mainLogoP2_1').css('left', "-5px");
+
+                    // 주소창 문제가 있는 모바일 웹브라우저에서 실행하는 함수
+                    if (isMobile == true && (browser == 'firefox' || browser == 'safari' || browser == 'chrome' || browser == 'whale' || browser == 'samsung')) {
+
+                        if (browser == 'firefox') {
+                            $('#mainLogoP2').css('font-size', '90px');
+                        }
+
+                        var plusInt = parseInt($(".main-page").css("height")) - $(window).innerHeight();
+                        var originHeight = $('.call-me-second>p').css('top'); //2vh계산
+
+                        $('#mainLogoP2').css('bottom', (parseInt(originHeight) + plusInt) + 'px');
+
+                    }
+                }
+
+                //모바일 화면에서 연락주시오 div를 가운데로 위치시킴
+                function callWidthPadding() {
+
+                    var firstPortMargin = parseFloat($(".first-portfolio").css('margin-left')); //컨텐츠 우측 공간 너비
+                    var callWidth = parseFloat($('#call-width').css('width')); //컨텐츠 너비
+                    var hundredVw = parseFloat($('#scroll-left').css('width')); //전체화면 너비
+
+                    var rightPosition = (hundredVw - callWidth) / 2 - firstPortMargin;
+
+                    $('#call-width').css('right', rightPosition);
+
+                }
+
+                //햄버거 메뉴의 연락주세요 클릭시 연락주시오 div로 이동
+                function ContactClickFunction() {
+
+                    $('.tap-target-wrapper>.tap-target-wrapper').removeClass('open');
+                    $(".nav-icon4").removeClass('open');
+
+                    if (Math.abs($(window).scrollTop() * 2 - $(document).height()) <= 1) {
+                        $("#scroll-left").animate({
+                            scrollLeft: ($('#whole-content').width())
+                        }, 2000);
+                    } else {
+                        $.when($('html, body').stop().animate({
+                            scrollTop: parseInt($('#main').css('height'))
+                        }, 1000)).done(function() {
+                            // $("#scroll-left").animate({scrollLeft:($('#whole-content').width() - $('#call-width').width()*1.1 )},2000);
+                            $("#scroll-left").animate({
+                                scrollLeft: ($('#whole-content').width())
+                            }, 2000);
+                        })
+                    }
+                }
+
+                //포트폴리오 화면으로 이동시 현재 스크롤위치 저장과 계절값 전달
+                function goPortfolio() {
+                    location.href = "https://ideadesignlab.kr/index.php/client/portfolio/index/summer"
+                }
+
+                //ie에서는 clamp가 적용되지 않아 직접 적용
+                function checkIE() {
+
+                    var agent = navigator.userAgent.toLowerCase();
+
+                    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) { // IE 일 경우
+                        $('#mainLogoP2_2').css("right", "16px");
+
+                        $('.hover-font').css('line-height', '3.5vh');
+                        if (parseInt($('.hover-font').css('line-height')) > 22) {
+                            $('.hover-font').css('line-height', '22px');
+                        } else if (parseInt($('.hover-font').css('line-height')) < 5) {
+                            $('.hover-font').css('line-height', '5px');
+                        }
+
+                        $('.hover-font').css('font-size', '2.4vh');
+                        if (parseInt($('.hover-font').css('font-size')) > 14) {
+                            $('.hover-font').css('font-size', '14px');
+                        } else if (parseInt($('.hover-font').css('font-size')) < 5) {
+                            $('.hover-font').css('font-size', '5px');
+                        }
+
+                        return;
+                    }
+                }
+
+                //현재 계절에 따라 이미지 교체
+                function calMonth() {
+
+                    var month = "summer";
+
+                    if (month == "spring") { //봄
+                        $('#main').css('background-color', 'rgb(200,240,0)');
+                        $('#mainLogoP').css('color', 'rgb(255,255,0)');
+                        $('#mainLogoP2').css('color', 'rgb(255,255,0)');
+                        $('#bottomWindow').css('background-image', "url(https://ideadesignlab.kr/application/data/file/chanwoo/bakcgroundSpring.jpg)");
+                    } else if (month == "summer") { //여름
+                        $('#main').css('background-color', 'rgb(240,210,190)');
+                        $('#mainLogoP').css('color', 'rgb(255,65,30)');
+                        $('#mainLogoP2').css('color', 'rgb(255,65,30)');
+                        $('#bottomWindow').css('background-image', "url(https://ideadesignlab.kr/application/data/file/chanwoo/background.png)");
+                    } else if (month == "fall") { //가을
+                        $('#main').css('background-color', 'rgb(80,180,195)');
+                        $('#mainLogoP').css('color', 'rgb(75,245,190)');
+                        $('#mainLogoP2').css('color', 'rgb(75,245,190)');
+                        $('#bottomWindow').css('background-image', "url(https://ideadesignlab.kr/application/data/file/chanwoo/backgroundFall.jpg)");
+                    } else { //겨울
+                        $('#main').css('background-color', 'none');
+                        $('#main').css('background-image', "url(https://ideadesignlab.kr/application/data/file/chanwoo/winter4.jpg)");
+                        $('#mainLogoP').css('color', 'rgb(255,255,255)');
+                        $('#mainLogoP2').css('color', 'rgb(255,255,255)');
+                        $('#bottomWindow').css('background-image', "url(https://ideadesignlab.kr/application/data/file/chanwoo/backgroundWinter.jpg)");
+                    }
+                }
+
+                //메인페이지에서 글자를 이미지로 변경하는 함수
+                function changePToImg() {
+
+                    var funTimer = setTimeout(function() {
+                        if ($(window).width() > 600) {
+                            $.when($('#mainLogoP').fadeOut(800)).done(function() {
+                                $('#mainLogoP').css('display', 'none');
+                                $('#mainLogoImg').fadeIn(800);
+                                $('#mainLogoImg').css('display', 'inline-block');
+                            })
+                        } else {
+                            $.when($('#mainLogoP2').fadeOut(800)).done(function() {
+                                $('#mainLogoP2').css('display', 'none');
+                                $('#mainLogoImg').fadeIn(800);
+                                $('#mainLogoImg').css('display', 'inline-block');
+                            })
+                        }
+
+                        changeImgToP();
+                        clearTimeout(funTimer);
+                    }, 5000);
+
+                }
+                /*
+                //메인페이지에서 이미지를 글자로 변경하는 함수
+                function changeImgToP() {
+
+                    var funTimer = setTimeout(function() {
+                        if ($(window).width() > 600) {
+                            $.when($('#mainLogoImg').fadeOut(800)).done(function() {
+                                $('#mainLogoImg').css('display', 'none');
+                                $('#mainLogoP').fadeIn(800);
+                                $('#mainLogoP').css('display', 'inline-block');
+                            })
+                        } else {
+                            $.when($('#mainLogoImg').fadeOut(800)).done(function() {
+                                $('#mainLogoImg').css('display', 'none');
+                                $('#mainLogoP2').fadeIn(800);
+                                $('#mainLogoP2').css('display', 'inline-block');
+                            })
+                        }
+
+                        changePToImg();
+                        clearTimeout(funTimer);
+                    }, 3000);
+
+                }
+                    */
+                function movePage() {
+                    var session_bottom = "0";
+
+                    if (session_bottom == "1") {
+                        setTimeout(function() {
+                            location.href = "#bottomWindow";
+                        }, 50)
+                    }
+
+                }
+
+                //포트폴리오 페이지로 이동
+                function ToPort() {
+
+                    var cur_location = Math.abs($(window).scrollTop() + $(window).height() - $(document).height());
+
+                    if (cur_location <= 1) {
+                        var result = $.ajax('https://ideadesignlab.kr/index.php/Welcome/setSession')
+                            .done(function(json) {})
+                            .fail(function() {
+                                // alert("실패");
+                            })
+                    }
+                }
+
+                //changeFontSizeo에서 사용을 위해 컨텐츠들의 아이디를 가져옴
+                function getId() {
+                    arrId[0] = 62;
+                    arrId[1] = 26;
+                    arrId[2] = 47;
+                    arrId[3] = 27;
+                    arrId[4] = 55;
+                    arrId[5] = 56;
+                    arrId[6] = 57;
+                    arrId[7] = 58;
+                    arrId[8] = 59;
+                    arrId[9] = 60;
+                    arrId[10] = 51;
+                    arrId[11] = 50;
+                    arrId[12] = 52;
+                    arrId[13] = 49;
+                    arrId[14] = 61;
+                }
+
+                //hover의 hash font-size를 조절해주는 함수
+                function changeFontSize() {
+
+                    var parentHeight, childHeight, divHeights;
+                    getId();
+
+                    for (var idx = 0; idx < arrId.length; idx++) {
+
+                        parentHeight = parseFloat($('#hover-text' + arrId[idx]).css('height'));
+                        childHeight = parseFloat($('#hover-font' + arrId[idx]).css('height'));
+
+                        if (childHeight > parentHeight) {
+                            divHeights = parentHeight / childHeight;
+                            $('#hover-font' + arrId[idx]).css('line-height', parseFloat($('#hover-font' + arrId[idx]).css('line-height')) * divHeights - 1 + 'px');
+                            $('#hover-font' + arrId[idx]).css('font-size', parseFloat($('#hover-font' + arrId[idx]).css('font-size')) * divHeights - 2 + 'px');
+                        }
+                    }
+                }
+
+                // portfolio 화면 크기를 내용의 크기 만큼 늘림
+                function width() {
+                    var l1_num = "15";
+                    var l1_width = $("#l1-width").outerWidth(true) * l1_num / 2 + $("#l1-width").outerWidth(true);
+                    var call_width = $("#call-width").outerWidth(true);
+                    var whole_width = l1_width + call_width;
+                    document.getElementById('whole-content').style.width = whole_width + 'px';
+                }
+
+                //메인페이지에서 상하 스크롤 이동(PC)
+                var is_bottom = 0;
+                var eventName;
+
+                if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                    eventName = "DOMMouseScroll";
+                } else {
+                    eventName = "mousewheel";
+                }
+                var is_animate = false;
+
+                window.addEventListener(eventName, function(event) {
+                    //상하 스크롤시 맨 위, 맨 아래로 이동
+                    if (!is_animate) {
+                        if (event.deltaY > 0 || event.wheelDelta < 0 || event.detail > 0) { //아래로 이동
+                            is_animate = true;
+                            $('html, body').stop().animate({
+                                scrollTop: parseInt($('#main').css('height'))
+                            }, 1000, function() {
+                                is_animate = false;
+                            });
+                        } else if ((event.deltaY < 0 || event.wheelDelta > 0 || event.detail < 0) && is_bottom == 0) { //위로 이동
+                            is_animate = true;
+                            $('html, body').stop().animate({
+                                scrollTop: 0
+                            }, 1000, function() {
+                                is_animate = false;
+                            });
+                        }
+                    }
+
+                    return false;
+
+                    event.preventDefault();
+                }, {
+                    passive: false
+                })
+
+                //메인페이지에서 상하 스크롤 이동(Mobile)
+                var ts;
+                $(document).bind('touchstart', function(e) {
+                    ts = e.originalEvent.touches[0].clientY;
+                });
+
+                $(document).bind('touchend', function(e) {
+                    var te = e.originalEvent.changedTouches[0].clientY;
+
+                    if (!is_animate) {
+                        if (ts > te + 100) { //아래로 이동
+                            is_animate = true;
+                            $('html, body').stop().animate({
+                                scrollTop: parseInt($('#main').css('height'))
+                            }, 1000, function() {
+                                is_animate = false;
+                            });
+                        } else if (ts < te - 100) { //위로 이동
+                            is_animate = true;
+                            $('html, body').stop().animate({
+                                scrollTop: 0
+                            }, 1000, function() {
+                                is_animate = false;
+                            });
+                        }
+                    }
+
+                });
+
+                // scroll vertical to horizontal
+                var is_bottomChange = false;
+                var is_horizontal = false;
+
+                $(window).on('scroll', function(e) {
+
+                    var scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+                    var windowHeight = window.innerHeight; // 스크린 창
+                    var fullHeight = document.body.scrollHeight; //  margin 값은 포함 x
+                    var move = 0;
+                    var curLocation = (Math.abs($(window).scrollTop() + $(window).height() - $(document).height()) <= ($("body").height() / 4)) ? "second" : "first";
+
+                    if (Math.abs($(window).scrollTop() + $(window).height() - $(document).height()) <= 1) {
+                        is_bottom = 1;
+                    }
+
+                    (function() {
+                        function scrollHorizontally(e) {
+
+                            e = window.event || e;
+                            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+                            if (delta == 1 && document.getElementById('scroll-left').scrollLeft == 0) {
+                                if (!is_bottomChange) {
+                                    is_bottomChange = true;
+                                    var timer1 = setTimeout(function() {
+                                        is_bottomChange = false;
+                                        is_bottom = 0;
+                                        timer1 = null;
+                                    }, 500);
+                                }
+                            }
+
+                            if (is_bottom == 1) {
+                                document.getElementById('scroll-left').scrollLeft -= (delta * 30); // 스크롤되는 양? 조절
+                            }
+
+                            if (is_bottom == 0) {
+
+                                is_horizontal = false;
+                                if (document.getElementById('scroll-left').addEventListener) {
+
+                                    // IE9, Chrome, Safari, Opera
+                                    document.getElementById('scroll-left').removeEventListener('mousewheel', scrollHorizontally, false);
+                                    // Firefox
+                                    document.getElementById('scroll-left').removeEventListener('DOMMouseScroll', scrollHorizontally, false);
+
+                                } else {
+                                    // IE 6/7/8
+                                    document.getElementById('scroll-left').removeEventListener('onmousewheel', scrollHorizontally);
+                                }
+                            }
+
+                            e.preventDefault();
+                        }
+
+                        if (is_bottom == 1 && !is_horizontal) {
+
+                            is_horizontal = true;
+                            if (document.getElementById('scroll-left').addEventListener) {
+
+                                // IE9, Chrome, Safari, Opera
+                                document.getElementById('scroll-left').addEventListener('mousewheel', scrollHorizontally, false);
+                                // Firefox
+                                document.getElementById('scroll-left').addEventListener('DOMMouseScroll', scrollHorizontally, false);
+
+                            } else {
+                                // IE 6/7/8
+                                document.getElementById('scroll-left').attachEvent('onmousewheel', scrollHorizontally);
+                            }
+                        }
+
+                    })();
+
+                });
+
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <!-- <div style="height: 50px; background-color: blue; margin-top: 10px;">
+    FOOTER
+</div> -->
+        </div>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="./주식회사 아이들_files/firebase-app.js.다운로드"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="./주식회사 아이들_files/firebase-analytics.js.다운로드"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDElEho7mgoTl0EzuboS5k900o-k_L4CVw",
+            authDomain: "ideadesignlab-6386b.firebaseapp.com",
+            databaseURL: "https://ideadesignlab-6386b.firebaseio.com",
+            projectId: "ideadesignlab-6386b",
+            storageBucket: "ideadesignlab-6386b.appspot.com",
+            messagingSenderId: "954069089597",
+            appId: "1:954069089597:web:4072414754b4cfa9e2d954",
+            measurementId: "G-5GK9ET758X"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

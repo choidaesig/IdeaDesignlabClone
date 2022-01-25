@@ -1,0 +1,180 @@
+/**
+ * * 2019.08.06 (화)
+ * 숫자패드 설정기능
+ */
+function setupNumberPad(id = "") {
+  if (id != "") {
+    $("#" + id).bind("keyup", function(event) {
+      var regNumber = /^[0-9]*$/;
+      var temp = $("#" + id)
+        .val()
+        .replace("-", "");
+
+      if (!regNumber.test(temp)) {
+        $("#" + id).val(temp.replace(/[^0-9]/g, ""));
+      }
+    });
+  }
+}
+
+/**
+ * * 2019.08.06 (화)
+ * 휴대폰번호 포매터
+ */
+function phoneFormatter(id = "") {
+  if (id != "") {
+    $("#" + id).focusout(function(event) {
+      var regExp = /^\d{3}-\d{3,4}-\d{4}$/;
+      var temp = $("#" + id).val();
+      var check_temp = $("#" + id)
+        .val()
+        .replace("-", "");
+
+      if (check_temp.length > 11) {
+        alert("전화번호를 확인해 주세요");
+        $("#" + id).val("");
+      } else {
+        if (!regExp.test(temp)) {
+          $("#" + id).val(
+            temp.replace(
+              /(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/,
+              "$1-$2-$3"
+            )
+          );
+        }
+      }
+    });
+  }
+}
+
+/**
+ * * 2019.08.06 (화)
+ * 사업자번호 포매터
+ */
+function businessNumberFormatter(id = "") {
+  if (id != "") {
+    $("#" + id).focusout(function(event) {
+      var regExp = /^\d{3}-\d{2}-\d{5}$/;
+      var temp = $("#" + id).val();
+      var check_temp = $("#" + id)
+        .val()
+        .replace("-", "");
+
+      if (check_temp.length > 10) {
+        alert("사업자번호를 확인해 주세요");
+        $("#" + id).val("");
+      } else {
+        if (!regExp.test(temp)) {
+          $("#" + id).val(
+            temp.replace(
+              /(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{5})/,
+              "$1-$2-$3"
+            )
+          );
+        }
+      }
+    });
+  }
+}
+
+/**
+ * * 이메일 검증기능
+ */
+function emailValidation(obj, isRequired, label) {
+  if (label == "" || label == undefined) {
+    label = "이메일";
+  }
+  if (isRequired) {
+    if (obj.value == "") {
+      alert(label + "을(를) 입력해주세요");
+      obj.focus();
+      return false;
+    }
+  }
+  if (obj.value != "") {
+    
+    
+    if (!checkEmailForm(obj.value)) {
+      alert(label + " 형식이 올바르지 않습니다.");
+      obj.focus();
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * 이메일 유효성 검사
+ * @param 이메일 emailStr 
+ */
+function checkEmailForm(emailStr){
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(emailStr);
+}
+
+/**
+ * * 날짜형식 검증기능
+ */
+function dateValidate(obj) {
+  var regEx = /^\d{4}-\d{2}-\d{2}$/;
+
+  if (!regEx.test(obj.value)) {
+    alert("날짜 형식이 올바르지 않습니다.");
+    obj.focus();
+    return false;
+  }
+  return true;
+}
+
+/**
+ * * 전화번호 검증기능
+ */
+function tel_format(obj) {
+  var kcode = event.keyCode;
+
+  if (
+    kcode == 8 ||
+    kcode == 116 ||
+    kcode == 189 || // backspace  f5 , -_
+    (kcode >= 37 && kcode <= 40) || //�붿궡��
+    (kcode >= 48 && kcode <= 57) ||
+    (kcode >= 96 && kcode <= 105) // �レ옄
+  ) {
+    if ((kcode >= 48 && kcode <= 57) || (kcode >= 96 && kcode <= 105)) {
+      if (obj.value.length > 13) {
+      } else {
+        var noDash = obj.value.replace(/\-/gi, "");
+        var f, s, t;
+        if (noDash.indexOf("02") == 0) {
+          if (noDash.length <= 9) {
+            f = noDash.substring(0, 2);
+            s = noDash.substring(2, 5);
+            t = noDash.substring(5, 9);
+          } else if (noDash.length == 10) {
+            f = noDash.substring(0, 2);
+            s = noDash.substring(2, 6);
+            t = noDash.substring(6, 12);
+          }
+        } else {
+          if (noDash.length <= 10) {
+            f = noDash.substring(0, 3);
+            s = noDash.substring(3, 6);
+            t = noDash.substring(6, 10);
+          } else if (noDash.length == 11) {
+            f = noDash.substring(0, 3);
+            s = noDash.substring(3, 7);
+            t = noDash.substring(7, 11);
+          }
+        }
+        s = s.length > 0 ? "-" + s : "";
+        t = t.length > 0 && t.indexOf("-") == -1 ? "-" + t : t;
+        obj.value = f + s + t;
+      }
+    }
+
+    return true;
+  } else {
+    obj.value = obj.value.replace(/[^0-9\-]/gi, "");
+    return false;
+  }
+}
